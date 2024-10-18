@@ -2,7 +2,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 st.set_page_config(layout='wide',
-                   page_title='thomaskillmantest')
+                   page_title='thomaskillmantest'
+                  p)
 
 V = 0
 P = 0
