@@ -14,6 +14,112 @@ if "page" not in st.session_state:
     st.session_state.page = 0
 
 
+def calculation():
+    global A, V, E, P, K
+    if index == 1 or index == 27:
+        if option == f"***A***:{questions_list[i]}":
+            E += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            A += 1
+    elif index == 15:
+        if option == f"***A***:{questions_list[i]}":
+            A += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            E += 1
+
+    elif index == 2 or index == 26:
+        if option == f"***A***:{questions_list[i]}":
+            K += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            P += 1
+    elif index == 20:
+        if option == f"***A***:{questions_list[i]}":
+            P += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            K += 1
+
+    elif index == 3 or index == 25:
+        if option == f"***A***:{questions_list[i]}":
+            V += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            A += 1
+    elif index == 16:
+        if option == f"***A***:{questions_list[i]}":
+            A += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            V += 1
+
+    elif index == 5 or index == 19 or index == 23:
+        if option == f"***A***:{questions_list[i]}":
+            P += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            E += 1
+
+    elif index == 6 or index == 9:
+        if option == f"***A***:{questions_list[i]}":
+            E += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            V += 1
+    elif index == 17:
+        if option == f"***A***:{questions_list[i]}":
+            V += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            E += 1
+
+    elif index == 7 or index == 12:
+        if option == f"***A***:{questions_list[i]}":
+            E += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            K += 1
+    elif index == 29:
+        if option == f"***A***:{questions_list[i]}":
+            K += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            E += 1
+
+    elif index == 8 or index == 28:
+        if option == f"***A***:{questions_list[i]}":
+            V += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            P += 1
+    elif index == 14:
+        if option == f"***A***:{questions_list[i]}":
+            P += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            V += 1
+
+    elif index == 13 or index == 22:
+        if option == f"***A***:{questions_list[i]}":
+            K += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            V += 1
+    elif index == 10:
+        if option == f"***A***:{questions_list[i]}":
+            V += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            K += 1
+
+    elif index == 18 or index == 24:
+        if option == f"***A***:{questions_list[i]}":
+            A += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            K += 1
+    elif index == 4:
+        if option == f"***A***:{questions_list[i]}":
+            K += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            A += 1
+
+    elif index == 21 or index == 30:
+        if option == f"***A***:{questions_list[i]}":
+            A += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            P += 1
+    elif index == 11:
+        if option == f"***A***:{questions_list[i]}":
+            P += 1
+        elif option == f"***B***:{questions_list[i + 1]}":
+            A += 1
 def nextpage(): st.session_state.page += 1
 
 
@@ -49,111 +155,7 @@ elif st.session_state.page == 1:
             index=None,
             key=index,
         )
-        if index == 1 or index == 27:
-            if option == f"***A***:{questions_list[i]}":
-                E += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                A += 1
-        elif index == 15:
-            if option == f"***A***:{questions_list[i]}":
-                A += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                E += 1
-
-        elif index == 2 or index == 26:
-            if option == f"***A***:{questions_list[i]}":
-                K += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                P += 1
-        elif index == 20:
-            if option == f"***A***:{questions_list[i]}":
-                P += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                K += 1
-
-        elif index == 3 or index == 25:
-            if option == f"***A***:{questions_list[i]}":
-                V += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                A += 1
-        elif index == 16:
-            if option == f"***A***:{questions_list[i]}":
-                A += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                V += 1
-
-        elif index == 5 or index == 19 or index == 23:
-            if option == f"***A***:{questions_list[i]}":
-                P += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                E += 1
-
-        elif index == 6 or index == 9:
-            if option == f"***A***:{questions_list[i]}":
-                E += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                V += 1
-        elif index == 17:
-            if option == f"***A***:{questions_list[i]}":
-                V += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                E += 1
-
-        elif index == 7 or index == 12:
-            if option == f"***A***:{questions_list[i]}":
-                E += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                K += 1
-        elif index == 29:
-            if option == f"***A***:{questions_list[i]}":
-                K += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                E += 1
-
-        elif index == 8 or index == 28:
-            if option == f"***A***:{questions_list[i]}":
-                V += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                P += 1
-        elif index == 14:
-            if option == f"***A***:{questions_list[i]}":
-                P += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                V += 1
-
-        elif index == 13 or index == 22:
-            if option == f"***A***:{questions_list[i]}":
-                K += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                V += 1
-        elif index == 10:
-            if option == f"***A***:{questions_list[i]}":
-                V += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                K += 1
-
-        elif index == 18 or index == 24:
-            if option == f"***A***:{questions_list[i]}":
-                A += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                K += 1
-        elif index == 4:
-            if option == f"***A***:{questions_list[i]}":
-                K += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                A += 1
-
-        elif index == 21 or index == 30:
-            if option == f"***A***:{questions_list[i]}":
-                A += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                P += 1
-        elif index == 11:
-            if option == f"***A***:{questions_list[i]}":
-                P += 1
-            elif option == f"***B***:{questions_list[i + 1]}":
-                A += 1
-
+        calculation()
         i += 2
         if index == 30:
             break
@@ -217,6 +219,3 @@ elif st.session_state.page == 3:
     Test_results = open("tests_results.html", "r", encoding='utf-8')
     html_source = Test_results.read()
     st.html(html_source)
-
-
-
