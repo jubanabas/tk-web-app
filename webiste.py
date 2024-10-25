@@ -151,7 +151,7 @@ elif st.session_state.page == 1:
     for index, item in enumerate(questions_list, start=1):
         option = st.radio(
             label=f"{index}",
-            options=(f"***A***:{questions_list[i]}", f"***B***:{questions_list[i + 1]}"),
+            options=(f"***A***: {questions_list[i]}", f"***B***: {questions_list[i + 1]}"),
             index=None,
             key=index,
         )
