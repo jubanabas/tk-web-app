@@ -2,8 +2,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 st.set_page_config(layout='wide',
-                   page_title='thomas-killman-test')
-
+                   page_title='thomaskillmantest',
+                   )
 V = 0
 P = 0
 K = 0
@@ -151,7 +151,7 @@ elif st.session_state.page == 1:
     for index, item in enumerate(questions_list, start=1):
         option = st.radio(
             label=f"{index}",
-            options=(f"***A***: {questions_list[i]}", f"***B***: {questions_list[i + 1]}"),
+            options=(f"***A***:{questions_list[i]}", f"***B***:{questions_list[i + 1]}"),
             index=None,
             key=index,
         )
